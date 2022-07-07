@@ -304,8 +304,12 @@ function App() {
                 <TeamTitle>Kumakun</TeamTitle>
                 <TeamSub>Artist/Developer</TeamSub>
                 <TeamSocial>
-                  <img src={instagram} alt="instagram" height="16px" />
-                  <img src={twitter} alt="twitter" height="16px" />
+                  <a href="https://instagram.com/lcanady" target="_blank">
+                    <img src={instagram} alt="Instagram" height="16px" />
+                  </a>
+                  <a href="https://twitter.com/lcanady" target="_blank">
+                    <img src={twitter} alt="twitter" height="16px" />
+                  </a>
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
