@@ -16,6 +16,7 @@ import born from "./assets/born.png";
 import ghost from "./assets/ghost.png";
 import vortex from "./assets/vortex.png";
 import kumakun from "./assets/kumakun.png";
+import kite from "./assets/kite.png";
 const Background = styled.div`
   background: linear-gradient(180deg, rgba(119, 179, 188, 0) 50%, #76b8bf 100%),
     url(${background});
@@ -313,7 +314,7 @@ function App() {
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
-                <TeamImg src={glyf} alt="Kite" height="300px" />
+                <TeamImg src={kite} alt="Kite" height="300px" />
                 <TeamTitle>Kite</TeamTitle>
                 <TeamSub>Administration/Artist</TeamSub>
                 <TeamSocial>
