@@ -45,6 +45,10 @@ const Hero = styled.div`
   background-size: cover;
   background-position: center;
   margin-top: 30px;
+
+  @media only screen and (max-width: 768px) {
+    border-radius: 0;
+  }
 `;
 
 const Links = styled.div`
@@ -53,6 +57,11 @@ const Links = styled.div`
 
   img {
     margin-left: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 5px;
+    margin-left: 0;
   }
 `;
 
@@ -65,11 +74,28 @@ const Content = styled.div`
   p {
     text-align: justify;
   }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      margin: 30px auto;
+    }
+  }
 `;
 
 const About = styled.div`
   max-width: 800px;
   margin-right: 30px;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Divider = styled.div`
@@ -82,6 +108,10 @@ const Divider = styled.div`
 const BabyWhale = styled.img`
   border-radius: 100%;
   margin-left: auto;
+
+  @media only screen and (max-width: 768px) {
+    margin: 30px 0;
+  }
 `;
 
 const MintBox = styled.div`
@@ -95,6 +125,15 @@ const MintBox = styled.div`
 
   p {
     margin: 0 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+    margin: 30px 0;
+    border-radius: 0;
+    p {
+      margin: 20px;
+    }
   }
 `;
 
@@ -129,20 +168,43 @@ const Team = styled.div`
   &:last-child {
     margin-right: auto;
   }
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+  }
 `;
+
 const TeamMember = styled.div`
   margin: 30px 0;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+  }
 `;
+
 const TeamImg = styled.img`
   width: 300px;
   border-radius: 100%;
 `;
+
 const TeamTitle = styled.p`
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
   margin: 0;
   padding: 0;
+  @media only screen and (max-width: 768px) {
+    margin-top: 20px;
+    text-align: center;
+  } ;
 `;
 const TeamSub = styled.p`
   font-size: 14px;
@@ -245,10 +307,14 @@ function App() {
               <TeamMember>
                 <TeamImg src={glyf} alt="glyf" height="300px" />
                 <TeamTitle>Glyf</TeamTitle>
-                <TeamSub>Artist</TeamSub>
+                <TeamSub>Artist/Marketing</TeamSub>
                 <TeamSocial>
-                  <img src={instagram} alt="instagram" height="16px" />
-                  <img src={twitter} alt="twitter" height="16px" />
+                  <a href="https://instagram.com/glyf82" target="_blank">
+                    <img src={instagram} alt="Instagram" height="16px" />
+                  </a>
+                  <a href="https://twitter.com/Glyf01" target="_blank">
+                    <img src={twitter} alt="twitter" height="16px" />
+                  </a>
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
@@ -265,8 +331,12 @@ function App() {
                 <TeamTitle>Mr. Sazon</TeamTitle>
                 <TeamSub>Marketing/Artist/Music</TeamSub>
                 <TeamSocial>
-                  <img src={instagram} alt="instagram" height="16px" />
-                  <img src={twitter} alt="twitter" height="16px" />
+                  <a href="https://instagram.com/themrsazon" target="_blank">
+                    <img src={instagram} alt="Instagram" height="16px" />
+                  </a>
+                  <a href="https://twitter.com/themrsazon" target="_blank">
+                    <img src={twitter} alt="twitter" height="16px" />
+                  </a>
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
@@ -285,10 +355,14 @@ function App() {
               <TeamMember>
                 <TeamImg src={ghost} alt="Ghost Skater" height="300px" />
                 <TeamTitle>Ghost Skater</TeamTitle>
-                <TeamSub>Administration</TeamSub>
+                <TeamSub>Artist</TeamSub>
                 <TeamSocial>
-                  <img src={instagram} alt="instagram" height="16px" />
-                  <img src={twitter} alt="twitter" height="16px" />
+                  <a href="https://instagram.com/ghostskater" target="_blank">
+                    <img src={instagram} alt="Instagram" height="16px" />
+                  </a>
+                  <a href="https://twitter.com/bomberheadnft" target="_blank">
+                    <img src={twitter} alt="twitter" height="16px" />
+                  </a>
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
@@ -297,7 +371,9 @@ function App() {
                 <TeamSub>Social Media/Art</TeamSub>
                 <TeamSocial>
                   <img src={instagram} alt="instagram" height="16px" />
-                  <img src={twitter} alt="twitter" height="16px" />
+                  <a href="https://twitter.com/ivortextit" target="_blank">
+                    <img src={twitter} alt="twitter" height="16px" />
+                  </a>
                 </TeamSocial>
               </TeamMember>
               <TeamMember>
@@ -305,7 +381,7 @@ function App() {
                 <TeamTitle>Kumakun</TeamTitle>
                 <TeamSub>Artist/Developer</TeamSub>
                 <TeamSocial>
-                  <a href="https://instagram.com/lcanady" target="_blank">
+                  <a href="https://instagram.com/lemcanady" target="_blank">
                     <img src={instagram} alt="Instagram" height="16px" />
                   </a>
                   <a href="https://twitter.com/lcanady" target="_blank">
